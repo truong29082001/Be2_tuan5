@@ -1,9 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CompaniesController;
-use App\Http\Controllers\TrainerController;
-use App\Http\Controllers\SearchController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,7 +16,3 @@ use App\Http\Controllers\SearchController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/companies', [CompaniesController::class, 'companies']);
-Route::get('/trainer', [TrainerController::class, 'trainer']);
-Route::get('/searchtrainers', [SearchController::class,'search']);
-// Route::get('/search', 'SearchController');

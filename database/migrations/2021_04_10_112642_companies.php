@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFlightsTable extends Migration
+class Companies extends Migration
 {
     /**
      * Run the migrations.
@@ -14,10 +14,10 @@ class CreateFlightsTable extends Migration
     public function up()
     {
         Schema::create('companies', function (Blueprint $table) {
-            $table->increments('company_id');
+            $table->integer('company_id',11);
             $table->string('company_name',55);
             $table->string('company_web',255);
-            $table->string('company_address',500);
+            $table->string('company_address', 500);
             $table->string('company_code',55);
             $table->string('company_phone',55);
         });
