@@ -35,12 +35,13 @@
       <span class="fs-4">Pricing example</span>
     </a>
 
-    <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+    <!-- <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
       <a class="me-3 py-2 text-dark text-decoration-none" href="{{URL::to('/categories')}}">Categories</a>
       <a class="me-3 py-2 text-dark text-decoration-none" href="{{URL::to('/companies')}}">Companies</a>
       <a class="me-3 py-2 text-dark text-decoration-none" href="{{URL::to('/trainers')}}">Trainer</a>
       <a class="me-3 py-2 text-dark text-decoration-none" href="{{URL::to('/search')}}">Search</a>
-    </nav>
+    </nav> -->
+    @include('header')
   </header>
 
   <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
@@ -71,7 +72,12 @@
    
     </table>
     {{ $companies ->links()}}
-  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+
+
+ 
+    @include('footer')
+   
+  <!-- <footer class="pt-4 my-md-5 pt-md-5 border-top">
     <div class="row">
       
       <div class="col-6 col-md">
@@ -107,7 +113,7 @@
   </footer>
 </div>
 
-    
+     -->
 
 </body>
 </html>
