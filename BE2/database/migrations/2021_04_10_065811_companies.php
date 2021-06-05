@@ -14,13 +14,12 @@ class Companies extends Migration
     public function up()
     {
         Schema::create('companies', function (Blueprint $table) {
-            $table->increments('company_id'); 
+            $table->integer('company_id',11);
             $table->string('company_name',55);
             $table->string('company_web',255);
-            $table->string('company_address',500);
+            $table->string('company_address', 500);
             $table->string('company_code',55);
             $table->string('company_phone',55);
-            $table->integer('category_id',false);
         });
         
         

@@ -1,13 +1,12 @@
 <?php
 
 namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
-use Illuminate\Database\Migrations;
-
-class TrainerSeeder extends Seeder
+class group extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,12 +15,11 @@ class TrainerSeeder extends Seeder
      */
     public function run()
     {
-        $limit = 10;
-
-        for ($i = 0; $i < $limit; $i++){
-            DB::table('trainers')->insert([
-                'company_id' => $i+1,
+        for ($i=0; $i < 10; $i++){
+            DB::table('group')->insert([          
+            'group_name' => 'triet',
             ]);
         }
+
     }
 }

@@ -4,20 +4,21 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Trainers extends Migration
+class UserHasGroup extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
-    {
-        Schema::create('trainers', function (Blueprint $table) {
-            $table->integer('trainer_id', 11);
-            $table->integer('company_id', $autoIncrement=false);
-        });
+    public function up(){
+    Schema::create('user_has_group', function (Blueprint $table) {
+        $table->integer('group_id'); 
+        $table->integer('user_id'); 
+    });
     }
+
+    
 
     /**
      * Reverse the migrations.
@@ -26,6 +27,8 @@ class Trainers extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('trainers');
+     
+        //
+        Schema::dropIfExists('user_has_group');
     }
 }

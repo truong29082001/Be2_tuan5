@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Illuminate\Database\Migrations;
 
-class TrainerSeeder extends Seeder
+class Courses_catalog_has_semester extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,12 +16,15 @@ class TrainerSeeder extends Seeder
      */
     public function run()
     {
-        $limit = 10;
+        $limit = 20;
 
-        for ($i = 0; $i < $limit; $i++){
-            DB::table('trainers')->insert([
-                'company_id' => $i+1,
+        for ($i=0; $i < 10; $i++){ 
+            DB::table('courses_catalog_has_semester')->insert([
+                
+                'coursecaralog_id'  => rand(1,2),
+                'semester_id'  => rand(1,10),
             ]);
         }
+       
     }
 }
