@@ -19,6 +19,7 @@ class Classes extends Migration
             $table->integer('faculty_id');
             $table->integer('teacher_id');
             $table->integer('student_id');
+            $table->timestamps();
         });
     }
 

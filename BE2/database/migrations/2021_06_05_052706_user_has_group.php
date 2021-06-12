@@ -15,6 +15,7 @@ class UserHasGroup extends Migration
     Schema::create('user_has_group', function (Blueprint $table) {
         $table->integer('group_id'); 
         $table->integer('user_id'); 
+        $table->timestamps();
     });
     }
 

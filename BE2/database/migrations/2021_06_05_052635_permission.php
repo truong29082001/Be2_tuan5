@@ -16,6 +16,7 @@ class Permission extends Migration
         Schema::create('permission', function (Blueprint $table) {
             $table->increments('permission_id'); 
             $table->string('permission_name',55); 
+            $table->timestamps();
         });
 
     }

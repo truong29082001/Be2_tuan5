@@ -16,6 +16,7 @@ class GroupHasPermission extends Migration
     Schema::create('group_has_permission', function (Blueprint $table) {
         $table->integer('group_id'); 
         $table->integer('permission_id'); 
+        $table->timestamps();
     });
 }
 

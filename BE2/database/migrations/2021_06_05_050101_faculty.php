@@ -17,6 +17,7 @@ class Faculty extends Migration
             $table->integer('faculty_id',11); 
             $table->string('faculty_name',55);
             $table->integer('classes_id');
+            $table->timestamps();
             
         });
     }

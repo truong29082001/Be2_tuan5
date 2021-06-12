@@ -15,6 +15,7 @@ class UserHasPermission extends Migration
     Schema::create('user_has_permission', function (Blueprint $table) {
         $table->integer('permission_id'); 
         $table->integer('user_id'); 
+        $table->timestamps();
     });
 
 

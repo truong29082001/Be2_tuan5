@@ -22,6 +22,7 @@ class User extends Migration
             $table->string('phone',55);
             $table->string('address',55);
             $table->integer('student_id',false);
+            $table->timestamps();
         });
     }
 
