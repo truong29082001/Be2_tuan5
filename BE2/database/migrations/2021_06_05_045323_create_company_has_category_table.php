@@ -16,7 +16,7 @@ class CreateCompanyHasCategoryTable extends Migration
         Schema::create('company_has_category', function (Blueprint $table) {
             $table->integer('company_id', $autoIncrement=false);
             $table->integer('category_id', $autoIncrement=false);
-              
+            $table->timestamps();
         });
     }
 

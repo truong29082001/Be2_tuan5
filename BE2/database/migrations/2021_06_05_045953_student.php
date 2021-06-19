@@ -22,6 +22,7 @@ class Student extends Migration
             $table->integer('user_id');
             $table->integer('faculty_id');
             $table->integer('diary_id');
+            $table->timestamps();
         });
     }
 

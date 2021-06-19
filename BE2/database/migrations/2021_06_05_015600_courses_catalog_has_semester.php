@@ -16,6 +16,7 @@ class CoursesCatalogHasSemester extends Migration
         Schema::create('courses_catalog_has_semester', function (Blueprint $table) {
             $table->integer('semester_id');
             $table->integer('coursecaralog_id');
+            $table->timestamps();
           
         });
     }

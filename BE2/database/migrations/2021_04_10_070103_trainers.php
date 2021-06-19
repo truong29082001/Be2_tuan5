@@ -16,6 +16,7 @@ class Trainers extends Migration
         Schema::create('trainers', function (Blueprint $table) {
             $table->integer('trainer_id', 11);
             $table->integer('company_id', $autoIncrement=false);
+            $table->timestamps();
         });
     }
 

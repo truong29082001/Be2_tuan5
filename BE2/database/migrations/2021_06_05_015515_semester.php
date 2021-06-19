@@ -16,6 +16,7 @@ class Semester extends Migration
         Schema::create('semester', function (Blueprint $table) {
             $table->increments('semester_id'); 
             $table->string('semester_name',55);
+            $table->timestamps();
            
          
         });

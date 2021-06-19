@@ -17,6 +17,7 @@ class Coursecatalog extends Migration
         Schema::create('coursecatalog', function (Blueprint $table) {
             $table->increments('coursecaralog_id'); 
             $table->string('shoolyear',55);
+            $table->timestamps();
           
         });
     }

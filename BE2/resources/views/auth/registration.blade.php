@@ -21,9 +21,9 @@
 
                             <div class="form-group mb-3">
                                 <input type="text" placeholder="Email" id="email_address" class="form-control"
-                                    name="user_name" required autofocus>
-                                @if ($errors->has('user_name'))
-                                <span class="text-danger">{{ $errors->first('user_name') }}</span>
+                                    name="email" required autofocus>
+                                @if ($errors->has('email'))
+                                <span class="text-danger">{{ $errors->first('email') }}</span>
                                 @endif
                             </div>
 

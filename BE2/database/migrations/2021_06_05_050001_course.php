@@ -19,6 +19,7 @@ class Course extends Migration
             $table->integer('course_catalog_id');
             $table->integer('classes_id');
             $table->integer('student_id');
+            $table->timestamps();
         });
     }
 

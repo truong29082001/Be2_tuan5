@@ -20,14 +20,13 @@ class CustomAuthController extends Controller
     public function customLogin(Request $request)
     {
         $request->validate([
-            'user_name' => 'required',
+            'email' => 'required',
             'password' => 'required',
         ]);
    
         $credentials = $request->only('email', 'password');
-        if (Auth::attempt($credentials)) {
-            return redirect()->intended('dashboard')
-                        ->withSuccess('Signed in');
+        if (Auth::attempt(['user_email' => $credentials['email'], 'password' => $credentials['password']])) {
+            return redirect()->intended('dashboard')->withSuccess("Signed in");
         }
   
         return redirect("login")->withSuccess('Login details are not valid');
@@ -45,8 +44,8 @@ class CustomAuthController extends Controller
     {  
         $request->validate([
             'name' => 'required',
-            'user_name' => 'required',
-            'password' => 'required',
+            'email' => 'required|email|unique:users,user_email',
+            'password' => 'required|min:6',
         ]);
            
         $data = $request->all();
@@ -59,9 +58,9 @@ class CustomAuthController extends Controller
     public function create(array $data)
     {
       return User::create([
-        'name' => $data['name'],
-        'user_name' => $data['user_name'],
-        'password' => Hash::make($data['password'])
+        'user_name' => $data['name'],
+        'user_email' => $data['email'],
+        'user_password' => Hash::make($data['password'])
       ]);
     }    
     

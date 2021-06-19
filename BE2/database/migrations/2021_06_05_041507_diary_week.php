@@ -21,7 +21,7 @@ class DiaryWeek extends Migration
     $table->date('lastday');
     $table->integer('diary_id', $autoIncrement=false);
     $table->timestamps();
-
+   
         });
     }
 
